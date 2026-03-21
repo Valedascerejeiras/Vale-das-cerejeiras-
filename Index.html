@@ -21,7 +21,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Fundo animado */
+/* 🌸 Pétalas */
 .petal {
     position: fixed;
     top: -10px;
@@ -39,14 +39,21 @@ body {
     }
 }
 
+/* 👑 CORES DOS NOMES */
+.lider {
+    color: gold;
+    text-shadow: 0 0 10px gold;
+}
+
+.vice {
+    color: #ff4fd8;
+    text-shadow: 0 0 10px #ff4fd8;
+}
+
 header {
     text-align: center;
     padding: 60px 20px;
     background: linear-gradient(90deg, #ff00cc, #8000ff);
-}
-
-header h1 {
-    font-size: 40px;
 }
 
 nav {
@@ -69,7 +76,6 @@ section {
 
 h2 {
     margin-bottom: 30px;
-    font-size: 28px;
 }
 
 .cards {
@@ -103,7 +109,7 @@ ul li {
     margin: 10px 0;
 }
 
-/* Formulário */
+/* formulário */
 form {
     max-width: 400px;
     margin: auto;
@@ -114,8 +120,8 @@ form {
 
 input, textarea {
     padding: 10px;
-    border: none;
     border-radius: 8px;
+    border: none;
 }
 
 button {
@@ -125,7 +131,6 @@ button {
     background: #ff00cc;
     color: white;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 button:hover {
@@ -153,22 +158,22 @@ button:hover {
 
         <div class="card">
             <h3>Líder</h3>
-            <p>Mkzinhuu</p>
+            <p class="lider">Mkzinhuu</p>
         </div>
 
         <div class="card">
             <h3>Vice-Líder</h3>
-            <p>Lunemoon0</p>
+            <p class="vice">Lunemoon0</p>
         </div>
 
         <div class="card">
             <h3>Vice-Líder</h3>
-            <p>AndreyBR18</p>
+            <p class="vice">AndreyBR18</p>
         </div>
 
         <div class="card">
             <h3>Vice-Líder</h3>
-            <p>Icebfzin1</p>
+            <p class="vice">Icebfzin1</p>
         </div>
 
     </div>
@@ -201,16 +206,15 @@ button:hover {
 </section>
 
 <script>
-// Criar pétalas animadas
+// pétalas
 for (let i = 0; i < 25; i++) {
     let petal = document.createElement("div");
     petal.classList.add("petal");
     petal.style.left = Math.random() * 100 + "vw";
     petal.style.animationDuration = (5 + Math.random() * 5) + "s";
-    petal.style.opacity = Math.random();
     document.body.appendChild(petal);
 }
 </script>
 
 </body>
-    </html>
+                                                 </html>
