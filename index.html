@@ -16,7 +16,7 @@ color:white;
 overflow-x:hidden;
 }
 
-/* 🌸 pétalas */
+/* pétalas */
 .petal{
 position:fixed;
 top:-10px;
@@ -32,7 +32,7 @@ animation:fall linear infinite;
 to{transform:translateY(110vh) rotate(360deg);}
 }
 
-/* ✨ partículas */
+/* partículas */
 .sparkle{
 position:fixed;
 width:4px;
@@ -59,35 +59,33 @@ opacity:1;
 transform:translateY(0);
 }
 
-/* 👑 líder */
+/* líder */
 .lider-card{
 border:2px solid gold;
 box-shadow:0 0 25px gold;
+position:relative;
+}
+
+.lider-card::before{
+content:"👑";
+position:absolute;
+top:-15px;
+left:15px;
+font-size:24px;
+transform:rotate(-25deg);
 }
 
 .lider{
 color:gold;
 text-shadow:0 0 10px gold;
-position:relative;
 }
 
-
-
-/* 🌸 vices */
+/* vices */
 .vice-card{
 border:2px solid gold;
 box-shadow:0 0 15px gold;
 }
-    
-.lider::before{
-content:"👑";
-position:absolute;
-top:-35px;
-left:20px;
-transform:rotate(-25deg);
-font-size:22px;
-    }
-    
+
 .vice{
 color:#ff4fd8;
 text-shadow:0 0 10px #ff4fd8;
@@ -250,14 +248,22 @@ margin-top:15px;
 <h2>📩 Recrutamento</h2>
 
 <form id="form" action="https://formsubmit.co/vcerejeiras@gmail.com" method="POST">
+
 <input type="text" name="Nome" placeholder="Seu nome" required>
+
 <input type="text" name="Nick" placeholder="Nick no Minecraft" required>
+
+<!-- 🔥 NOVO CAMPO -->
+<input type="text" name="Discord" placeholder="Seu Discord (ex: mkzinhuu#0001)" required>
+
 <input type="number" name="Idade" placeholder="Idade" required>
+
 <textarea name="Motivo" placeholder="Por que quer entrar?" required></textarea>
 
 <input type="hidden" name="_captcha" value="false">
 
 <button type="submit">Enviar</button>
+
 </form>
 
 <p class="success" id="msg">✅ Inscrição enviada com sucesso!</p>
@@ -273,7 +279,7 @@ p.style.animationDuration=(4+Math.random()*6)+"s";
 document.body.appendChild(p);
 }
 
-// ✨ partículas
+// partículas
 for(let i=0;i<30;i++){
 let s=document.createElement("div");
 s.className="sparkle";
@@ -298,7 +304,7 @@ navigator.clipboard.writeText("bawmc.net");
 alert("IP copiado!");
 }
 
-// mensagem
+// mensagem sucesso
 document.getElementById("form").addEventListener("submit", function(){
 setTimeout(()=>{
 document.getElementById("msg").style.display="block";
