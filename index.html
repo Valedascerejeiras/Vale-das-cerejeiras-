@@ -147,7 +147,7 @@ ul li{
 margin:10px 0;
 }
 
-/* botão */
+/* botão servidor */
 .server-btn{
 margin-top:20px;
 padding:12px 20px;
@@ -156,6 +156,35 @@ border:none;
 border-radius:10px;
 color:white;
 cursor:pointer;
+}
+
+/* 🌐 redes sociais */
+.social{
+margin-top:20px;
+}
+
+.social-btn{
+display:inline-block;
+margin:10px;
+padding:12px 20px;
+border-radius:10px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:0.3s;
+}
+
+.instagram{
+background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+}
+
+.tiktok{
+background:black;
+border:1px solid #ff00cc;
+}
+
+.social-btn:hover{
+transform:scale(1.1);
 }
 
 /* form */
@@ -196,6 +225,21 @@ margin-top:15px;
 <h1>🌸 Vale das Cerejeiras 🌸</h1>
 <p>Clã Oficial de Minecraft</p>
 <button class="server-btn" onclick="copyIP()">🎮 Entrar no servidor: bawmc.net</button>
+
+<!-- 🔥 REDES -->
+<div class="social">
+<p>🌸 Siga a gente nas nossas redes sociais:</p>
+
+<a href="https://www.instagram.com/valecerejeirasmc?igsh=MXh1YzhsOHZoanZuaA==" target="_blank" class="social-btn instagram">
+📸 Instagram
+</a>
+
+<a href="https://www.tiktok.com/@valedascerejeirasmc?_r=1&_t=ZS-952LKXMY3Pz" target="_blank" class="social-btn tiktok">
+🎵 TikTok
+</a>
+
+</div>
+
 </header>
 
 <nav>
@@ -235,7 +279,7 @@ margin-top:15px;
 <section id="regras" class="fade">
 <h2>📜 Regras</h2>
 <ul>
-<li>✔ não destruir as coisas</li>
+<li>✔ Respeitar todos</li>
 <li>✔ Manter respeito mútuo</li>
 <li>✔ Não ter preconceito</li>
 <li>✔ Participar das guerras</li>
@@ -250,14 +294,9 @@ margin-top:15px;
 <form id="form" action="https://formsubmit.co/vcerejeiras@gmail.com" method="POST">
 
 <input type="text" name="Nome" placeholder="Seu nome" required>
-
 <input type="text" name="Nick" placeholder="Nick no Minecraft" required>
-
-<!-- 🔥 NOVO CAMPO -->
-<input type="text" name="Discord" placeholder="Seu Discord (ex: user#0001)" required>
-
+<input type="text" name="Discord" placeholder="Seu Discord (ex: mkzinhuu#0001)" required>
 <input type="number" name="Idade" placeholder="Idade" required>
-
 <textarea name="Motivo" placeholder="Por que quer entrar?" required></textarea>
 
 <input type="hidden" name="_captcha" value="false">
@@ -304,7 +343,7 @@ navigator.clipboard.writeText("bawmc.net");
 alert("IP copiado!");
 }
 
-// mensagem sucesso
+// mensagem
 document.getElementById("form").addEventListener("submit", function(){
 setTimeout(()=>{
 document.getElementById("msg").style.display="block";
